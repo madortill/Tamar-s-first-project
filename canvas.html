@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="canvas-style.css">
+    <script src="canvas-code.js"></script>
+  </head>
+  <body>
+    <section class="drawing-warpper" id="drawing-warpper">
+        <div>
+            <canvas id="drawing-board"></canvas>
+        </div>
+        <div id="toolbar">
+          <input id="stroke" name='stroke' type="color">
+          <label for="lineWidth" id="indication">Line Width</label>
+          <input id="lineWidth" name='lineWidth' type="range" value="5" min="1" max="15">
+          <button id="clear">Clear</button>
+      </div>
+    </section>
+  </body>
+</html>

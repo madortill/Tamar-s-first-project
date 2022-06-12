@@ -1,0 +1,508 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: "calibri";
+}
+
+.body {
+    background-color: rgb(254, 188, 68);
+    background-size: 100% 100%;
+}
+
+.about {
+    display: none;
+}
+
+.close {
+    margin: 0;
+    position: absolute
+}
+
+.symbols {
+    display: flex;
+    justify-content: space-between;
+}
+
+.till {
+    width: 15vmin;
+    margin: 0.7vh 2vw;
+}
+
+.bahad {
+    width: 5vmax;
+    height: auto;
+    margin: 1vh 2.5vw 0vh 0vw;
+}
+
+.about-text {
+    font-size: 3.5vmax;
+}
+
+.container {
+    background-color: rgb(76, 196, 185);
+    text-align: center;
+    width: 80vw;
+    height: fit-content;
+    padding: 2vh 3vw;
+    margin-bottom: 5vh;
+    border-radius: 10%;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border: black solid 1px;
+}
+
+.title {
+    font-size: 8vmax;
+}
+
+.text {
+    font-size: 4.5vmax;
+}
+
+.next {
+    font-size: 2.5vmax;
+    padding: 1vh 1vw 1vh 2vw;
+    border-radius: 2vw;
+    width: 30vw;
+    height: 6vh;
+    background-color: rgb(76, 39, 25);
+    color: white;
+    position: absolute;
+    top: 85vh;
+    left: 10vw;
+}
+
+.none {
+    display: none;
+}
+
+.chicken {
+    position: absolute;
+    top: 38%;
+    right: -50vw;
+    width: 60vw;
+    height: auto;
+    z-index: 1;
+    animation: chicken-animation 10s;
+}
+
+.egg-animation {
+    position: absolute;
+    top: 49vh;
+    right: -30vw;
+    width: 10vw;
+    height: auto;
+    animation: egg-animation 10s;
+}
+
+@keyframes chicken-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-70vw);
+    }
+
+    50% {
+        transform: translateX(-70vw);
+    }
+
+    80% {
+        transform: translateX(-150vw);
+    }
+
+    100% {
+        transform: translateX(-150vw);
+    }
+}
+
+@keyframes egg-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(-70vw, 0);
+    }
+
+    50% {
+        transform: translate(-70vw, 15vh);
+    }
+
+    68% {
+        transform: translate(-70vw, 15vh);
+    }
+
+    100% {
+        transform: translate(-75vw, -5vh) scale(300%);
+    }
+}
+
+/* canvas */
+.invisible {
+    visibility: hidden;
+}
+
+.drawing-warpper {
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#toolbar {
+    display: flex;
+    justify-content: space-around;
+    min-height: 10px;
+    height: 5vh;
+    min-width: 100px;
+    background-color: #202020;
+    color: white;
+}
+
+#toolbar * {
+    width: 20%;
+    height: 100%;
+}
+
+#toolbar label {
+    font-size: 2vmax;
+    margin: 1.5vh 5vw 2vh 0vw;
+}
+
+#toolbar input {
+    width: 40%;
+    margin-left: 5%;
+}
+
+#toolbar button {
+    background-color: #1565c0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 2px;
+    margin: 0 2vw;
+}
+
+
+.egg-canvas {
+    border: solid black 1px;
+    border-radius: 50%;
+}
+
+.egg-image {
+    border: black solid 1px;
+    display: none;
+    border-radius: 50%;
+    width: 30vw;
+    height: 20vh;
+    position: absolute;
+    right: 4vw;
+    bottom: 2vh;
+}
+
+.map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.egg {
+    width: 35vw;
+    height: 20vh;
+    position: absolute;
+    margin-top: 2vh;
+    background-size: 100% 100%;
+    font-size: 5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.egg-0 {
+    right: 10vw;
+}
+
+.egg-1 {
+    top: 25vh;
+    left: 10vw;
+}
+
+.egg-2 {
+    top: 50vh;
+    right: 10vw;
+}
+
+.egg-3 {
+    top: 75vh;
+    left: 10vw;
+}
+
+.info-text {
+    font-size: 3.5vmax;
+}
+
+li {
+    text-align: right;
+}
+
+@media only screen and (max-width: 282px) {
+    .info-text {
+        font-size: 9vmin;
+    }
+
+    .info-title {
+        font-size: 19vmin;
+    }
+
+    .next {
+        font-size: 5vmin;
+    }
+}
+
+/* Practice zero */
+.scratch-container {
+    border: 3px solid black;
+    position: relative;
+    top: 7vh;
+    /* top: 0; */
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.sCanvas {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.innerImage {
+    position: relative;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    z-index: -1;
+    background-color: white;
+}
+
+/* First practice */
+.house {
+    position: absolute;
+    bottom: 36vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 83vw;
+    height: auto;
+    z-index: 1
+}
+
+.door {
+    position: absolute;
+    bottom: 39.1vw;
+    left: 22vw;
+    width: 26vw;
+    height: auto;
+    z-index: 2;
+}
+
+.roof {
+    position: absolute;
+    bottom: 88.4vw;
+    left: 8.6vw;
+    width: 83vw;
+    height: auto;
+}
+
+.reminder {
+    font-size: 2.5vmax;
+    padding: 1.5vh 1.5vw 3vh 2vw;
+    border-radius: 2vw;
+    position: absolute;
+    right: 11vw;
+    top: 85vh;
+    width: fit-content;
+    height: 6vh;
+    background-color: rgb(76, 39, 25);
+    color: white;
+}
+
+.reminder-text {
+    width: 24vw;
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 2vmax;
+    position: absolute;
+    z-index: 1;
+    top: 75vh;
+    left: 70vw;
+    border: none;
+}
+
+
+.reminder-text::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 2vw;
+    border-style: solid;
+    border-color: rgb(243, 243, 243) transparent transparent transparent;
+}
+
+/* Second practice */
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.blink-animation {
+    animation: blink 1s forwards;
+}
+
+@keyframes click {
+    50% {
+        transform: scale(50%, 50%);
+    }
+
+    100% {
+        transform: scale(100%, 100%)
+    }
+}
+
+.click-animation {
+    animation: click 0.3s;
+}
+
+.practice-title {
+    font-size: 4vmax;
+    text-align: center;
+    margin-top: 1vh;
+    width: 92%;
+    margin: auto;
+}
+
+.practice1-title {
+    font-size: 4vmax;
+    text-align: center;
+    width: 97%;
+    margin: 1vh auto;
+}
+
+.option {
+    background-image: url("assets/media/egg.png");
+    background-size: 100% 100%;
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#option-0 {
+    top: 60vh;
+    left: 60vw;
+}
+
+#option-1 {
+    top: 20vh;
+    left: 60vw;
+}
+
+#option-2 {
+    top: 60vh;
+    left: 10vw;
+}
+
+#option-3 {
+    top: 40vh;
+    left: 35vw;
+}
+
+#option-4 {
+    top: 20vh;
+    left: 10vw;
+}
+
+.option p {
+    width: 80%;
+    text-align: center;
+    font-size: 2.5vmax;
+}
+
+.error {
+    color: red;
+    font-size: 3vmax;
+    position: absolute;
+    top: 90vh;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.finish-text {
+    color: white;
+    font-size: 7vmax;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+
+}
+
+.party {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.exit {
+    position: absolute;
+    top: 52vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6vh;
+    width: 25vw;
+    font-size: 4vmax;
+    border-radius: 2vw;
+    border: solid rgb(38, 40, 84) 1px;
+    background-color: rgb(58, 62, 129);
+    color: white;
+}

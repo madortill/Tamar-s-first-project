@@ -1,0 +1,57 @@
+html, 
+body {
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+}
+
+.drawing-warpper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-content: flex-start; */
+}
+
+#toolbar {
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: row; */
+    min-height: 10px;
+    height: 5vh;
+    min-width: 100px;
+    background-color: #202020;
+    color: white;
+    /* direction: rtl; */
+}
+
+#toolbar * {
+    width: 20%;
+    height: 100%;
+}
+
+#toolbar label {
+    font-size: 2vmax;
+    height: 100%;
+}
+
+#toolbar input {
+    width: 30%;
+    margin-left: 0;
+    margin-right: 5%;
+}
+
+#toolbar button {
+    background-color: #1565c0;
+    border: none;
+    border-radius: 4px;
+    color:white;
+    padding: 2px;
+}
+
+canvas {
+    border: solid black 1px;
+}

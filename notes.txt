@@ -1,0 +1,20 @@
+start counting from zero in everything
+event listeners on practice2
+change recursive function to setInterval
+
+what's left?
+- animation
+- replace recurive with interval
+- add reminder in practice one
+- remove timeout in start of practice 2
+- fix canvas
+
+
+
+מאזין לחיצה תקף גם כשהכפתור אפור
+ךסדר הוראות בסיימון.
+- כפתור בואו נתחיל בשטיפה: להפוך לרספונסיבי
+
+
+- בית רספונסיבי
+-map

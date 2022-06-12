@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>לומדת פינת ליטוף</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+</head>
+
+<body class="body" id="body">
+    <div class="symbols" id="symbols">
+        <img src="assets/media/bahad6.png" alt='בה"ד 6' class="bahad sym" />
+        <img src="assets/media/till.png" alt='מדור טי"ל' class="till sym" />
+    </div>
+    <div id="about" class="about">
+        <div class="container">
+            <p id="close" class="title close">X</p>
+            <h1 class="title">אודות</h1>
+            <p class="about-text">
+                מומחה תוכן: סג"מ בוריס שמשון<br>
+                פיתוח: רב"ט תמר סטופ<br>
+                גרפיקה: רב"ט תמר סטופ<br>
+                רת"ח מו"פ: סמ"ר אופק בצון<br>
+                רמ"ד טי"ל: רס"ן מיגל לויתן<br>
+                גרסה: מאי 2022
+            </p>
+        </div>
+    </div>
+    <div id="not-about">
+        <div id="opening">
+            <div id="page1">
+                <div class="container">
+                    <h1 class="title">לעולם לא נישבר!</h1>
+                    <p class="text">טיפול בביצים בפינת ליטוף</p>
+                </div>
+            </div>
+            <div id="page2" class="none">
+                <img src="assets/media/chicken.webp" alt="chicken" class="chicken" id="chicken-animation" />
+                <img src="assets/media/egg.png" alt="ביצה" class="egg-animation" id="egg-animation" />
+            </div>
+        </div>
+        <div id="page3" class="none">
+            <div class="container">
+                <p class="text">אמא תרנגולת המליטה ביצה חדשה ובתור אחראיים על מרכז הליטוף אתם זוכים לצייר לה פנים!
+                </p>
+            </div>
+        </div>
+        <div id="page4" class="invisible">
+            <section class="drawing-warpper" id="drawing-warpper">
+                <div>
+                    <canvas class="egg-canvas" id="drawing-board"></canvas>
+                </div>
+                <div id="toolbar">
+                    <!-- <input id="stroke" name='stroke' type="color"> -->
+                    <select id="stroke" name='stroke'>
+                        <option value="black" class="color">שחור</option>
+                        <option value="red" class="color">אדום</option>
+                        <option value="orange" class="color">כתום</option>
+                        <option value="yellow" class="color">צהוב</option>
+                        <option value="green" class="color">ירוק</option>
+                        <option value="blue" class="color">כחול</option>
+                        <option value="purple" class="color">סגול</option>
+                        <option value="pink" class="color">ורוד</option>
+                        <option value="white" class="color">מחק</option>
+                    </select>
+                    <label for="lineWidth" id="indication">עובי</label>
+                    <input id="lineWidth" name='lineWidth' type="range" value="5" min="1" max="15">
+                    <button id="clear">ניקוי</button>
+                </div>
+            </section>
+        </div>
+        <div id="map" class="none map"></div>
+        <div id="screen" class="none">
+            <div class="container">
+                <h1 class="info-title" id="screen-title"></h1>
+                <p class="info-text" id="screen-text"></p>
+            </div>
+        </div>
+        <div id="practice0" class="none">
+            <h1 class="practice-title">מחקו את הלכלוך מהביצה!</h1>
+            <div class="scratch-container" id="scratch-container">
+                <canvas class="sCanvas" id="sCanvas" width="300" height="300"></canvas>
+                <img src="" alt="egg" id="innerImage" class="innerImage">
+            </div>
+        </div>
+        <div id="practice1" class="none">
+            <p class="practice1-title">לחצו על החלקים השונים בבית עד שהבית יתאים לביצה. תוכלו להמשיך רק כשהבית יהיה
+                בצבעים הנכונים</p>
+            <div class="house-container">
+                <img alt="בית" class="house" id="house" usemap="#housemap" />
+                <img alt="דלת" class="door" id="door" />
+                <img alt="גג" class="roof" id="roof" />
+            </div>
+            <map name="housemap">
+                <area shape="rect" coords="15, 70, 290, 250" onclick="changeHouseColor()">
+                <area shape="poly" coords="10,70, 150,0, 265,70" onclick="changeHouseColor()">
+                <area shape="poly" coords="0,0, 0,70, 150,0" onclick="changeRoofColor()">
+                <area shape="poly" coords="400,0, 150,0, 150,400" onclick="changeRoofColor()">
+            </map>
+            <button class="reminder" id="reminder">
+                <span>רוצים תזכורת?</span>
+            </button>
+            <div id="reminder-text" class="reminder-text none">
+                <span>
+                    בית ורוד<br>גג סגול<br>דלת אדומה
+                </span>
+            </div>
+        </div>
+        <div id="practice2" class="none">
+            <h1 class="practice-title">לחצו על הביצים לפי הסדר שבו הן מהבהבות</h1>
+            <div id="option-wrap">
+                <div class="option" id="option-0">
+                    <p class="practice-text">נשים כפפות</p>
+                </div>
+                <div class="option" id="option-1">
+                    <p class="practice-text">נניח את הביצה על משטח מרופד</p>
+                </div>
+                <div class="option" id="option-2">
+                    <p class="practice-text">נרים את המשטח בזהירות</p>
+                </div>
+                <div class="option" id="option-3">
+                    <p class="practice-text">נעביר את הביצה למקום אחר</p>
+                </div>
+                <div class="option" id="option-4">
+                    <p class="practice-text">נוריד את הביצה מהמשטח</p>
+                </div>
+            </div>
+            <p class="error" id="error">אופס! זו לא הביצה הנכונה. נסו שוב.</p>
+        </div>
+        <img src="" class="egg-image" id="egg-image" alt="ביצה">
+        <button class="next" id="next">בואו נתחיל!</button>
+        <div id="finish" class="none finish">
+            <p class="finish-text">כל הכבוד! עכשיו אתם יודעים איך לטפל בביצים!</p>
+            <button id="exit" class="exit">יציאה</button>
+            <img src="assets/media/finish-image.png" alt="מסיבה" id="party" class="party" />
+        </div>
+    </div>
+</body>
+
+</html>
