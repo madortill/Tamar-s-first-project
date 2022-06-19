@@ -54,6 +54,9 @@ const PRACTICE_ONE_ANSWERS = [0, 0, 0];
 const PRACTICE_ONE_ANSWER_NUM = 4;
 
 window.addEventListener("load", (event) => {
+    document.addEventListener("dbclick", () => {
+        document.documentElement.requestFullscreen();
+    });
     document.getElementById("symbols").addEventListener("click", showAbout);
     document.getElementById("next").addEventListener("click", nextPage);
 });
